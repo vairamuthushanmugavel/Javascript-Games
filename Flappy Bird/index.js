@@ -53,8 +53,10 @@ function draw() {
             })
         }
         //detecting the collision
-        if (bx + bird.width >= pipe.x && bx + bird.width <= pipe.x + pipeTop.width) {
-                console.log("collison")
+        if ( ((bx + bird.width >= pipe.x && bx + bird.width <= pipe.x + pipeTop.width) &&
+            (by <= pipe.y + pipeTop.height || by + bird.height > pipe.y + pipeTop.height + gap))
+            || by + bird.height >= canvas.height - bg.height) {
+           console.log("collison")
         }
 
 
@@ -63,8 +65,9 @@ function draw() {
     ctx.drawImage(bg, 0, canvas.height - bg.height);
     ctx.drawImage(bird, bx, by);
     //updating the birds why position based on  Gravity
-    by += gravity
-
+    if ((by + bird.height) < (canvas.height - bg.height)) {
+        by += gravity
+    }
     requestAnimationFrame(draw);
 }
 draw()
