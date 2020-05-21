@@ -9,6 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
+    perspective: 1000px;
 }
 
 .grid{
@@ -22,9 +23,23 @@ body{
     border: 1px solid #eeeeee;
     border-radius: 5px;
     margin: 5px;
-
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    position: relative;
+    
 }
 .grid__cardimg{
     height: 100%;
     width: 100%;
+    background: #ffffff;
+    position: absolute;
+    /* backface-visibility: hidden; */
 }
+
+.grid__card--flip{
+    transform: rotateY(180deg);
+}
+
+.frontface{
+    transform: rotateY(180deg);
+  }
