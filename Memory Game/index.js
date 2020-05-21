@@ -88,14 +88,14 @@ let firstCard = null;
 let secondCard = null;
 function flipcard() {
   this.classList.add("grid__card--flip");
-  if (!hasflipped) {
-    hasflipped = true;
-    firstCard = this;
-    return;
-  }
-  secondCard = this;
-  hasflipped = false;
-  checkForMatch();
+  // if (!hasflipped) {
+  //   hasflipped = true;
+  //   firstCard = this;
+  //   return;
+  // }
+  // secondCard = this;
+  // hasflipped = false;
+  // checkForMatch();
 }
 
 const container = new DocumentFragment();
