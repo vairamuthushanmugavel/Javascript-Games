@@ -1,0 +1,30 @@
+
+body{
+    margin: 0px;
+    height: 100vh;
+}
+
+.grid-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 850px;
+}
+.grid__card{
+    height: 180px;
+    width: 200px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    margin: 5px;
+
+}
+.grid__cardimg{
+    height: 100%;
+    width: 100%;
+}
