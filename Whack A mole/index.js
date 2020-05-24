@@ -42,7 +42,7 @@ dirts.forEach((element) => {
 //when user clicks the the box
 function onHit() {
   // console.log(hitposition, this.id);
-  if (Number(this.id) === hitposition) {
+  if (Number(this.id) === hitposition && timeLeft > 0) {
     score++;
     scoreEle.innerHTML = score;
   }
