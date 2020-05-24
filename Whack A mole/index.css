@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  background: #ffc600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+}
+
+h1 {
+  margin: 12px;
+}
+.score,
+.timeleft {
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.dirt {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.buttoncontainer {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+button {
+  padding: 5px 15px;
+  border: none;
+  font-family: cursive;
+  font-size: 20px;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.dirt::after {
+  background: url(assets/dirt.svg) bottom center no-repeat;
+  position: absolute;
+  content: "";
+  height: 70px;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  background-size: contain;
+  z-index: 3;
+  width: 100%;
+}
+
+.mole {
+  background: url(assets/mole.svg) bottom center no-repeat;
+  background-size: 80px;
+  position: absolute;
+  bottom: -30px;
+  left: 27%;
+  height: 150px;
+  width: 100px;
+  transition: 400ms ease-in-out;
+  transform: translateY(60px);
+}
+.mole.show {
+  transform: translateY(-10px);
+}
